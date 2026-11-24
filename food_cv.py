@@ -628,7 +628,7 @@ def report_table(r: dict) -> list[tuple[str, str]]:
         ("Activation / Output Function", f"Gizli katmanlar ReLU; çıkış {n_classes} nöronlu Linear + Softmax"),
         ("Loss Function", f"Cross-entropy (label smoothing {tr(cfg['label_smoothing'])})"),
         ("Evaluation Metrics", "Accuracy, top-5 accuracy, macro precision / recall / F1, karışıklık matrisi"),
-        ("Training Environment", f"Google Colab, {env['device']}, PyTorch {env['torch']}, "
+        ("Training Environment", f"{env.get('platform', 'Google Colab')}, {env['device']}, PyTorch {env['torch']}, "
                                  f"eğitim süresi {tr(train_min, '.1f')} dk"),
         ("Best Performance", f"Test accuracy {fmt_pct(test['accuracy'])}, top-5 {fmt_pct(test['top5_accuracy'])}, "
                              f"macro F1 {fmt_pct(test['macro_f1'])}"),

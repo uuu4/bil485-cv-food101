@@ -28,8 +28,10 @@ gerçek dünya fotoğrafları üzerinde değerlendirme.
 | `app.py` | Gradio web uygulaması |
 | `my_photos/` | Food-101 dışından 5 gerçek dünya fotoğrafı (Wikimedia Commons, açık lisanslı; [kaynaklar](my_photos/SOURCES.md)); dosya adı gerçek etiket ([kural](my_photos/README.md)) |
 | `results/` | Notebook çıktıları: `results.json` (tüm ham sonuçlar), eğriler, karışıklık matrisi, hatalı örnekler, gerçek dünya fotoğrafı tahminleri |
-| `checkpoints/` | Seçilen modelin ağırlıkları (fp16) |
+| `checkpoints/` | İki modelin ağırlıkları (fp16): `resnet50_food101.pt` (uygulamanın kullandığı), `smallcnn_food101.pt` |
 | `tests/smoke_test.py` | Food-101 indirmeden, sahte küçük veriyle tüm akışı CPU'da sınayan test |
+| `tools/modal_run.py` | Notebook'u Modal'da (GPU) papermill ile çalıştıran betik; bu sonuçlar onunla üretildi |
+| `logs/modal_full_run.log` | Tam koşunun hücre hücre çıktısı |
 
 ## Çalıştırma
 
@@ -50,7 +52,18 @@ python app.py --share    # geçici herkese açık bağlantı
 
 ## Sonuçlar
 
-Colab çalıştırmasından sonra eklenecek (`REPORT.md` ve notebook §12).
+Notebook Modal'da (NVIDIA L4, 8 vCPU) baştan sona çalıştırıldı; çıktılar notebook'un içinde, ayrıntı [`REPORT.md`](REPORT.md) ve
+notebook §12'de.
+
+| Model | Validation acc | Test acc | Test top-5 | Test macro F1 | Eğitim süresi |
+|---|---|---|---|---|---|
+| Sıfırdan CNN (4 blok, 1,2 M parametre) | %48,1 | %52,3 | %80,3 | %50,9 | 4,2 dk |
+| **ResNet-50 transfer learning (seçilen)** | %82,6 | **%87,0** | %97,4 | %86,9 | 14,6 dk |
+
+Food-101 dışından 5 gerçek dünya fotoğrafı: Food-101'de olan 4 yemeğin 3'ü doğru (baklava %93, hamburger %56, pizza %49); kalamar
+tava "onion rings" sanıldı (doğru sınıf 2. sırada); Food-101'de olmayan lahmacun en yakın sınıf olan pizza'ya atandı (%63).
+
+![Gradio uygulaması](results/app_screenshot.png)
 
 ## Kaynaklar
 

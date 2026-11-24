@@ -1,0 +1,412 @@
+Input Notebook:  food101_cnn.ipynb
+Output Notebook: /vol/runs/full/food101_cnn_executed.ipynb
+Working directory: /root/work
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+Executing notebook with kernel: python3
+Executing Cell 1---------------------------------------
+Ending Cell 1------------------------------------------
+Executing Cell 2---------------------------------------
+Çalışma klasörü: /root/work
+
+Ending Cell 2------------------------------------------
+Executing Cell 3---------------------------------------
+{
+  "python": "3.12.10",
+  "torch": "2.15.0+cu132",
+  "cuda_available": true,
+  "device": "NVIDIA L4",
+  "cpu_count": 21,
+  "torchvision": "0.29.2+cu132",
+  "cuda": "13.2",
+  "platform": "Modal (L4, 8 vCPU)"
+}
+
+Ending Cell 3------------------------------------------
+Executing Cell 4---------------------------------------
+Ending Cell 4------------------------------------------
+Executing Cell 5---------------------------------------
+Food-101 hazır (1.3 dk). Sınıf sayısı: 101
+{'train': 68175, 'val': 7575, 'test': 25250, 'val_per_class': 75}
+Sınıf başına örnek (min / max): {'train': 675, 'val': 75, 'test': 250} {'train': 675, 'val': 75, 'test': 250}
+
+Ending Cell 5------------------------------------------
+Executing Cell 6---------------------------------------
+<Figure size 1500x800 with 18 Axes>
+Ending Cell 6------------------------------------------
+Executing Cell 7---------------------------------------
+Ending Cell 7------------------------------------------
+Executing Cell 8---------------------------------------
+Ending Cell 8------------------------------------------
+Executing Cell 9---------------------------------------
+name              smallcnn  resnet50
+arch              smallcnn  resnet50
+img_size               128       224
+epochs                   6         6
+batch_size             128        64
+lr                   0.002     0.001
+backbone_lr_mult       1.0       0.1
+weight_decay        0.0005    0.0001
+warmup_epochs          0.5       0.5
+label_smoothing        0.1       0.1
+optimizer            AdamW     AdamW
+pretrained           False      True
+dropout                0.3       0.2
+amp                   True      True
+Ending Cell 9------------------------------------------
+Executing Cell 10--------------------------------------
+Ending Cell 10-----------------------------------------
+Executing Cell 11--------------------------------------
+Ending Cell 11-----------------------------------------
+Executing Cell 12--------------------------------------
+smallcnn: 1.2 M parametre, epoch başına 532 adım
+
+  [smallcnn] epoch 1 adım 100/532 loss 4.535 acc 0.034 (897 görüntü/sn)
+
+  [smallcnn] epoch 1 adım 200/532 loss 4.438 acc 0.046 (1222 görüntü/sn)
+
+  [smallcnn] epoch 1 adım 300/532 loss 4.377 acc 0.054 (1386 görüntü/sn)
+
+  [smallcnn] epoch 1 adım 400/532 loss 4.314 acc 0.064 (1489 görüntü/sn)
+
+  [smallcnn] epoch 1 adım 500/532 loss 4.254 acc 0.074 (1551 görüntü/sn)
+
+[smallcnn] epoch 1/6  train loss 4.237 acc 0.077  |  val loss 3.757 acc 0.1242 top5 0.3492  |  0.8 dk
+
+  [smallcnn] epoch 2 adım 100/532 loss 3.880 acc 0.143 (1780 görüntü/sn)
+
+  [smallcnn] epoch 2 adım 200/532 loss 3.848 acc 0.149 (1844 görüntü/sn)
+
+  [smallcnn] epoch 2 adım 300/532 loss 3.813 acc 0.157 (1853 görüntü/sn)
+
+  [smallcnn] epoch 2 adım 400/532 loss 3.778 acc 0.166 (1870 görüntü/sn)
+
+  [smallcnn] epoch 2 adım 500/532 loss 3.747 acc 0.173 (1870 görüntü/sn)
+
+[smallcnn] epoch 2/6  train loss 3.736 acc 0.176  |  val loss 3.507 acc 0.1753 top5 0.4292  |  0.7 dk
+
+  [smallcnn] epoch 3 adım 100/532 loss 3.514 acc 0.234 (1792 görüntü/sn)
+
+  [smallcnn] epoch 3 adım 200/532 loss 3.494 acc 0.236 (1854 görüntü/sn)
+
+  [smallcnn] epoch 3 adım 300/532 loss 3.463 acc 0.244 (1864 görüntü/sn)
+
+  [smallcnn] epoch 3 adım 400/532 loss 3.430 acc 0.254 (1877 görüntü/sn)
+
+  [smallcnn] epoch 3 adım 500/532 loss 3.409 acc 0.259 (1877 görüntü/sn)
+
+[smallcnn] epoch 3/6  train loss 3.401 acc 0.261  |  val loss 3.020 acc 0.2770 top5 0.5576  |  0.7 dk
+
+  [smallcnn] epoch 4 adım 100/532 loss 3.215 acc 0.309 (1768 görüntü/sn)
+
+  [smallcnn] epoch 4 adım 200/532 loss 3.211 acc 0.312 (1847 görüntü/sn)
+
+  [smallcnn] epoch 4 adım 300/532 loss 3.192 acc 0.319 (1862 görüntü/sn)
+
+  [smallcnn] epoch 4 adım 400/532 loss 3.171 acc 0.325 (1872 görüntü/sn)
+
+  [smallcnn] epoch 4 adım 500/532 loss 3.150 acc 0.331 (1875 görüntü/sn)
+
+[smallcnn] epoch 4/6  train loss 3.141 acc 0.333  |  val loss 2.550 acc 0.3890 top5 0.6713  |  0.7 dk
+
+  [smallcnn] epoch 5 adım 100/532 loss 3.000 acc 0.372 (1747 görüntü/sn)
+
+  [smallcnn] epoch 5 adım 200/532 loss 2.993 acc 0.373 (1812 görüntü/sn)
+
+  [smallcnn] epoch 5 adım 300/532 loss 2.977 acc 0.378 (1815 görüntü/sn)
+
+  [smallcnn] epoch 5 adım 400/532 loss 2.968 acc 0.381 (1837 görüntü/sn)
+
+  [smallcnn] epoch 5 adım 500/532 loss 2.958 acc 0.384 (1845 görüntü/sn)
+
+[smallcnn] epoch 5/6  train loss 2.954 acc 0.385  |  val loss 2.293 acc 0.4558 top5 0.7413  |  0.7 dk
+
+  [smallcnn] epoch 6 adım 100/532 loss 2.872 acc 0.415 (1744 görüntü/sn)
+
+  [smallcnn] epoch 6 adım 200/532 loss 2.858 acc 0.415 (1826 görüntü/sn)
+
+  [smallcnn] epoch 6 adım 300/532 loss 2.849 acc 0.418 (1841 görüntü/sn)
+
+  [smallcnn] epoch 6 adım 400/532 loss 2.849 acc 0.417 (1837 görüntü/sn)
+
+  [smallcnn] epoch 6 adım 500/532 loss 2.848 acc 0.417 (1848 görüntü/sn)
+
+[smallcnn] epoch 6/6  train loss 2.846 acc 0.417  |  val loss 2.194 acc 0.4808 top5 0.7605  |  0.7 dk
+[smallcnn] bitti: en iyi epoch 6 (val acc 0.4808), toplam 4.2 dk
+
+<Figure size 1200x400 with 2 Axes>
+Ending Cell 12-----------------------------------------
+Executing Cell 13--------------------------------------
+Ending Cell 13-----------------------------------------
+Executing Cell 14--------------------------------------
+Downloading: "https://download.pytorch.org/models/resnet50-11ad3fa6.pth" to /root/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth
+
+
+
+
+
+
+
+
+
+
+
+
+resnet50: 23.7 M parametre, epoch başına 1065 adım
+
+  [resnet50] epoch 1 adım 100/1065 loss 4.583 acc 0.022 (249 görüntü/sn)
+
+  [resnet50] epoch 1 adım 200/1065 loss 4.339 acc 0.099 (333 görüntü/sn)
+
+  [resnet50] epoch 1 adım 300/1065 loss 3.873 acc 0.204 (375 görüntü/sn)
+
+  [resnet50] epoch 1 adım 400/1065 loss 3.513 acc 0.285 (401 görüntü/sn)
+
+  [resnet50] epoch 1 adım 500/1065 loss 3.258 acc 0.345 (419 görüntü/sn)
+
+  [resnet50] epoch 1 adım 600/1065 loss 3.066 acc 0.392 (431 görüntü/sn)
+
+  [resnet50] epoch 1 adım 700/1065 loss 2.915 acc 0.428 (440 görüntü/sn)
+
+  [resnet50] epoch 1 adım 800/1065 loss 2.793 acc 0.459 (447 görüntü/sn)
+
+  [resnet50] epoch 1 adım 900/1065 loss 2.694 acc 0.483 (453 görüntü/sn)
+
+  [resnet50] epoch 1 adım 1000/1065 loss 2.612 acc 0.504 (458 görüntü/sn)
+
+[resnet50] epoch 1/6  train loss 2.565 acc 0.516  |  val loss 1.080 acc 0.7439 top5 0.9226  |  2.7 dk
+
+  [resnet50] epoch 2 adım 100/1065 loss 1.676 acc 0.748 (486 görüntü/sn)
+
+  [resnet50] epoch 2 adım 200/1065 loss 1.679 acc 0.747 (494 görüntü/sn)
+
+  [resnet50] epoch 2 adım 300/1065 loss 1.674 acc 0.749 (497 görüntü/sn)
+
+  [resnet50] epoch 2 adım 400/1065 loss 1.673 acc 0.748 (499 görüntü/sn)
+
+  [resnet50] epoch 2 adım 500/1065 loss 1.670 acc 0.750 (500 görüntü/sn)
+
+  [resnet50] epoch 2 adım 600/1065 loss 1.666 acc 0.751 (501 görüntü/sn)
+
+  [resnet50] epoch 2 adım 700/1065 loss 1.664 acc 0.751 (502 görüntü/sn)
+
+  [resnet50] epoch 2 adım 800/1065 loss 1.660 acc 0.752 (502 görüntü/sn)
+
+  [resnet50] epoch 2 adım 900/1065 loss 1.652 acc 0.754 (502 görüntü/sn)
+
+  [resnet50] epoch 2 adım 1000/1065 loss 1.649 acc 0.755 (502 görüntü/sn)
+
+[resnet50] epoch 2/6  train loss 1.647 acc 0.755  |  val loss 0.885 acc 0.7898 top5 0.9424  |  2.4 dk
+
+  [resnet50] epoch 3 adım 100/1065 loss 1.473 acc 0.807 (489 görüntü/sn)
+
+  [resnet50] epoch 3 adım 200/1065 loss 1.467 acc 0.811 (496 görüntü/sn)
+
+  [resnet50] epoch 3 adım 300/1065 loss 1.470 acc 0.809 (499 görüntü/sn)
+
+  [resnet50] epoch 3 adım 400/1065 loss 1.464 acc 0.810 (500 görüntü/sn)
+
+  [resnet50] epoch 3 adım 500/1065 loss 1.463 acc 0.811 (501 görüntü/sn)
+
+  [resnet50] epoch 3 adım 600/1065 loss 1.462 acc 0.810 (501 görüntü/sn)
+
+  [resnet50] epoch 3 adım 700/1065 loss 1.461 acc 0.810 (502 görüntü/sn)
+
+  [resnet50] epoch 3 adım 800/1065 loss 1.460 acc 0.810 (502 görüntü/sn)
+
+  [resnet50] epoch 3 adım 900/1065 loss 1.457 acc 0.811 (502 görüntü/sn)
+
+  [resnet50] epoch 3 adım 1000/1065 loss 1.455 acc 0.812 (503 görüntü/sn)
+
+[resnet50] epoch 3/6  train loss 1.455 acc 0.813  |  val loss 0.827 acc 0.8067 top5 0.9463  |  2.4 dk
+
+  [resnet50] epoch 4 adım 100/1065 loss 1.337 acc 0.849 (486 görüntü/sn)
+
+  [resnet50] epoch 4 adım 200/1065 loss 1.332 acc 0.850 (495 görüntü/sn)
+
+  [resnet50] epoch 4 adım 300/1065 loss 1.331 acc 0.851 (498 görüntü/sn)
+
+  [resnet50] epoch 4 adım 400/1065 loss 1.328 acc 0.852 (500 görüntü/sn)
+
+  [resnet50] epoch 4 adım 500/1065 loss 1.327 acc 0.852 (501 görüntü/sn)
+
+  [resnet50] epoch 4 adım 600/1065 loss 1.321 acc 0.855 (501 görüntü/sn)
+
+  [resnet50] epoch 4 adım 700/1065 loss 1.321 acc 0.855 (502 görüntü/sn)
+
+  [resnet50] epoch 4 adım 800/1065 loss 1.321 acc 0.855 (502 görüntü/sn)
+
+  [resnet50] epoch 4 adım 900/1065 loss 1.320 acc 0.854 (502 görüntü/sn)
+
+  [resnet50] epoch 4 adım 1000/1065 loss 1.319 acc 0.855 (501 görüntü/sn)
+
+[resnet50] epoch 4/6  train loss 1.319 acc 0.855  |  val loss 0.748 acc 0.8231 top5 0.9518  |  2.4 dk
+
+  [resnet50] epoch 5 adım 100/1065 loss 1.241 acc 0.880 (488 görüntü/sn)
+
+  [resnet50] epoch 5 adım 200/1065 loss 1.238 acc 0.881 (496 görüntü/sn)
+
+  [resnet50] epoch 5 adım 300/1065 loss 1.236 acc 0.883 (498 görüntü/sn)
+
+  [resnet50] epoch 5 adım 400/1065 loss 1.226 acc 0.886 (499 görüntü/sn)
+
+  [resnet50] epoch 5 adım 500/1065 loss 1.226 acc 0.887 (500 görüntü/sn)
+
+  [resnet50] epoch 5 adım 600/1065 loss 1.226 acc 0.886 (501 görüntü/sn)
+
+  [resnet50] epoch 5 adım 700/1065 loss 1.228 acc 0.885 (501 görüntü/sn)
+
+  [resnet50] epoch 5 adım 800/1065 loss 1.230 acc 0.885 (502 görüntü/sn)
+
+  [resnet50] epoch 5 adım 900/1065 loss 1.230 acc 0.884 (502 görüntü/sn)
+
+  [resnet50] epoch 5 adım 1000/1065 loss 1.230 acc 0.883 (502 görüntü/sn)
+
+[resnet50] epoch 5/6  train loss 1.229 acc 0.884  |  val loss 0.741 acc 0.8260 top5 0.9530  |  2.4 dk
+
+  [resnet50] epoch 6 adım 100/1065 loss 1.176 acc 0.901 (487 görüntü/sn)
+
+  [resnet50] epoch 6 adım 200/1065 loss 1.183 acc 0.901 (495 görüntü/sn)
+
+  [resnet50] epoch 6 adım 300/1065 loss 1.183 acc 0.900 (495 görüntü/sn)
+
+  [resnet50] epoch 6 adım 400/1065 loss 1.181 acc 0.901 (497 görüntü/sn)
+
+  [resnet50] epoch 6 adım 500/1065 loss 1.184 acc 0.900 (498 görüntü/sn)
+
+  [resnet50] epoch 6 adım 600/1065 loss 1.183 acc 0.901 (499 görüntü/sn)
+
+  [resnet50] epoch 6 adım 700/1065 loss 1.184 acc 0.900 (500 görüntü/sn)
+
+  [resnet50] epoch 6 adım 800/1065 loss 1.183 acc 0.901 (500 görüntü/sn)
+
+  [resnet50] epoch 6 adım 900/1065 loss 1.182 acc 0.902 (501 görüntü/sn)
+
+  [resnet50] epoch 6 adım 1000/1065 loss 1.182 acc 0.901 (501 görüntü/sn)
+
+[resnet50] epoch 6/6  train loss 1.183 acc 0.901  |  val loss 0.739 acc 0.8248 top5 0.9534  |  2.4 dk
+[resnet50] bitti: en iyi epoch 5 (val acc 0.8260), toplam 14.6 dk
+
+<Figure size 1200x400 with 2 Axes>
+Ending Cell 14-----------------------------------------
+Executing Cell 15--------------------------------------
+Ending Cell 15-----------------------------------------
+Executing Cell 16--------------------------------------
+Validation doğrulukları: {'smallcnn': 0.4808, 'resnet50': 0.826}
+Seçilen model: resnet50
+
+                    Sıfırdan CNN (4 blok)  \
+val acc                            0.4808   
+test acc                           0.5225   
+test top-5                         0.8030   
+macro precision                    0.5096   
+macro recall                       0.5225   
+macro F1                           0.5091   
+eğitim süresi (dk)                 4.2079   
+
+                    ResNet-50 (ImageNet ön-eğitimli, ince ayar)  
+val acc                                                  0.8260  
+test acc                                                 0.8699  
+test top-5                                               0.9737  
+macro precision                                          0.8702  
+macro recall                                             0.8699  
+macro F1                                                 0.8693  
+eğitim süresi (dk)                                      14.5948  
+Ending Cell 16-----------------------------------------
+Executing Cell 17--------------------------------------
+Ending Cell 17-----------------------------------------
+Executing Cell 18--------------------------------------
+En zor 10 sınıf (F1'e göre):
+
+              class  precision  recall     f1  support
+0             Steak      0.585   0.592  0.588      250
+1         Pork chop      0.683   0.604  0.641      250
+2  Chocolate mousse      0.679   0.736  0.706      250
+3         Apple pie      0.832   0.632  0.718      250
+4      Filet mignon      0.697   0.756  0.726      250
+5     Bread pudding      0.777   0.712  0.743      250
+6         Foie gras      0.847   0.664  0.744      250
+7      Tuna tartare      0.773   0.748  0.760      250
+8           Ravioli      0.787   0.740  0.763      250
+9  Huevos rancheros      0.772   0.772  0.772      250
+En kolay 10 sınıf:
+
+               class  precision  recall     f1  support
+0            Edamame      0.992   0.992  0.992      250
+1           Macarons      0.988   0.972  0.980      250
+2       Deviled eggs      0.946   0.972  0.959      250
+3            Oysters      0.953   0.964  0.958      250
+4      Seaweed salad      0.967   0.936  0.951      250
+5            Sashimi      0.941   0.960  0.950      250
+6          Miso soup      0.955   0.940  0.948      250
+7  Hot and sour soup      0.931   0.964  0.947      250
+8            Cannoli      0.931   0.964  0.947      250
+9           Bibimbap      0.937   0.952  0.944      250
+En çok karışan sınıf çiftleri (gerçek → tahmin):
+
+               true              pred  count   rate
+0             Steak      Filet mignon     40  0.160
+1    Chocolate cake  Chocolate mousse     25  0.100
+2      Filet mignon             Steak     25  0.100
+3         Prime rib             Steak     23  0.092
+4      Tuna tartare      Beef tartare     23  0.092
+5  Chocolate mousse    Chocolate cake     20  0.080
+6         Pork chop      Filet mignon     19  0.076
+7         Pork chop    Grilled salmon     19  0.076
+8             Steak         Prime rib     18  0.072
+9         Pork chop             Steak     18  0.072
+Ending Cell 18-----------------------------------------
+Executing Cell 19--------------------------------------
+<Figure size 900x800 with 2 Axes>
+Ending Cell 19-----------------------------------------
+Executing Cell 20--------------------------------------
+<Figure size 1600x600 with 12 Axes>
+Ending Cell 20-----------------------------------------
+Executing Cell 21--------------------------------------
+Ending Cell 21-----------------------------------------
+Executing Cell 22--------------------------------------
+            gpu_ms      cpu_ms        gpu
+smallcnn  1.414468   26.028026  NVIDIA L4
+resnet50  7.694813  117.648692  NVIDIA L4
+Ending Cell 22-----------------------------------------
+Executing Cell 23--------------------------------------
+Ending Cell 23-----------------------------------------
+Executing Cell 24--------------------------------------
+                dosya          gerçek  Food-101'de       tahmin  olasılık  \
+0         baklava.jpg         Baklava         True      Baklava     0.931   
+1  fried_calamari.jpg  Fried calamari         True  Onion rings     0.767   
+2       hamburger.jpg       Hamburger         True    Hamburger     0.564   
+3        lahmacun.jpg        Lahmacun        False        Pizza     0.632   
+4           pizza.jpg           Pizza         True        Pizza     0.493   
+
+   doğru (top-1)  doğru (top-5)  gerçek sınıfın sırası  
+0           True           True                    1.0  
+1          False           True                    2.0  
+2           True           True                    1.0  
+3          False          False                    NaN  
+4           True           True                    1.0  
+<Figure size 1400x2100 with 15 Axes>
+Ending Cell 24-----------------------------------------
+Executing Cell 25--------------------------------------
+Ending Cell 25-----------------------------------------
+Executing Cell 26--------------------------------------
+/usr/local/lib/python3.12/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+
+baklava.jpg: **En olası sınıf:** Baklava (%93,0)  
+fried_calamari.jpg: **En olası sınıf:** Onion rings (%76,6)  
+hamburger.jpg: **En olası sınıf:** Hamburger (%56,7)  
+lahmacun.jpg: **En olası sınıf:** Pizza (%63,2)  
+
+pizza.jpg: **En olası sınıf:** Pizza (%49,7)  
+Arayüzü açmak için: python app.py  (ya da --share)
+
+Ending Cell 26-----------------------------------------
+Executing Cell 27--------------------------------------
+Ending Cell 27-----------------------------------------
+Executing Cell 28--------------------------------------
+<IPython.core.display.Markdown object>
+Ending Cell 28-----------------------------------------
+Executing Cell 29--------------------------------------
+Ending Cell 29-----------------------------------------
+Executing Cell 30--------------------------------------
+Ending Cell 30-----------------------------------------
