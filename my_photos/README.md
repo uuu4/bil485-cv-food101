@@ -1,6 +1,8 @@
-# Kendi telefon fotoğraflarım (5 adet)
+# Gerçek dünya fotoğrafları (5 adet)
 
-Bu klasöre telefonla çekilmiş 5 farklı yemek fotoğrafı konur. **Dosya adı gerçek etiketi söyler:**
+**Şu anki 5 fotoğraf Wikimedia Commons'tan alındı** (açık lisanslı, kaynaklar [SOURCES.md](SOURCES.md)): `pizza.jpg`, `baklava.jpg`, `hamburger.jpg` (patatesli, karışık tabak), `fried_calamari.jpg` (geniş, dar kadraj), `lahmacun.jpg` (Food-101'de yok). Ödev belgesi kendi telefonunla çekilmiş fotoğraf istiyor; çekersen bunları aynı kurala göre değiştir ve SOURCES.md'yi sil.
+
+Kural: **Dosya adı gerçek etiketi söyler:**
 
 - Food-101'de olan bir yemekse sınıf adı: `pizza.jpg`, `french_fries.jpg`, `ice_cream.heic`
 - Aynı sınıftan ikinci fotoğraf: `pizza-2.jpg`

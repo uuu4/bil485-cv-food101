@@ -655,7 +655,7 @@ def write_report(r: dict, path) -> Path:
                      f"{tr(m['train_time_s'] / 60, '.1f')} dk |")
     photos = r.get("my_photos") or []
     if photos:
-        lines += ["", "## Kendi telefon fotoğraflarım", "",
+        lines += ["", "## Gerçek dünya fotoğrafları (Food-101 dışından)", "",
                   "| Dosya | Gerçek | Food-101'de var mı | Tahmin (olasılık) | Doğru mu | Gerçek sınıfın sırası |",
                   "|---|---|---|---|---|---|"]
         for p in photos:

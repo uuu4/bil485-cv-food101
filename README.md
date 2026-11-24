@@ -2,8 +2,8 @@
 
 **Food-101 ile yemek fotoğrafı sınıflandırma: sıfırdan CNN ve ResNet-50 transfer learning**
 
-Bir yemek fotoğrafını 101 yemek sınıfından birine atayan bir model, onu kullanan bir Gradio web uygulaması ve telefonla çekilmiş
-gerçek fotoğraflar üzerinde değerlendirme.
+Bir yemek fotoğrafını 101 yemek sınıfından birine atayan bir model, onu kullanan bir Gradio web uygulaması ve Food-101 dışından
+gerçek dünya fotoğrafları üzerinde değerlendirme.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/uuu4/bil485-cv-food101/blob/main/food101_cnn.ipynb)
 
@@ -23,11 +23,11 @@ gerçek fotoğraflar üzerinde değerlendirme.
 
 | Dosya / klasör | İçerik |
 |---|---|
-| `food101_cnn.ipynb` | Tüm deney: veri ve bölme, iki modelin eğitimi, seçim, test, hata analizi, çıkarım süresi, telefon fotoğrafları, uygulama, rapor |
+| `food101_cnn.ipynb` | Tüm deney: veri ve bölme, iki modelin eğitimi, seçim, test, hata analizi, çıkarım süresi, gerçek dünya fotoğrafları, uygulama, rapor |
 | `food_cv.py` | Notebook ve uygulamanın ortak kodu: veri, modeller, eğitim döngüsü, metrikler, Grad-CAM, checkpoint, rapor |
 | `app.py` | Gradio web uygulaması |
-| `my_photos/` | Telefonla çektiğim 5 fotoğraf; dosya adı gerçek etiket ([çekim rehberi](my_photos/README.md)) |
-| `results/` | Notebook çıktıları: `results.json` (tüm ham sonuçlar), eğriler, karışıklık matrisi, hatalı örnekler, telefon fotoğrafı tahminleri |
+| `my_photos/` | Food-101 dışından 5 gerçek dünya fotoğrafı (Wikimedia Commons, açık lisanslı; [kaynaklar](my_photos/SOURCES.md)); dosya adı gerçek etiket ([kural](my_photos/README.md)) |
+| `results/` | Notebook çıktıları: `results.json` (tüm ham sonuçlar), eğriler, karışıklık matrisi, hatalı örnekler, gerçek dünya fotoğrafı tahminleri |
 | `checkpoints/` | Seçilen modelin ağırlıkları (fp16) |
 | `tests/smoke_test.py` | Food-101 indirmeden, sahte küçük veriyle tüm akışı CPU'da sınayan test |
 
